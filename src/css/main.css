@@ -1,0 +1,215 @@
+/* http://meyerweb.com/eric/tools/css/reset/
+  v2.0 | 20110126
+  License: none (public domain)
+*/
+html, body, div, span, applet, object, iframe, h1, h2, h3, h4, h5, h6, p, blockquote, pre, a, abbr, acronym, address, big, cite, code, del, dfn, em, img, ins, kbd, q, s, samp, small, strike, strong, sub, sup, tt, var, b, u, i, center, dl, dt, dd, ol, ul, li, fieldset, form, label, legend, table, caption, tbody, tfoot, thead, tr, th, td, article, aside, canvas, details, embed, figure, figcaption, footer, header, hgroup, menu, nav, output, ruby, section, summary, time, mark, audio, video {
+  margin: 0;
+  padding: 0;
+  border: 0;
+  font-size: 100%;
+  font: inherit;
+  vertical-align: baseline; }
+
+/* HTML5 display-role reset for older browsers */
+article, aside, details, figcaption, figure, footer, header, hgroup, menu, nav, section {
+  display: block; }
+
+body {
+  line-height: 1; }
+
+ol, ul {
+  list-style: none; }
+
+blockquote, q {
+  quotes: none; }
+
+blockquote:before, blockquote:after {
+  content: '';
+  content: none; }
+
+q:before, q:after {
+  content: '';
+  content: none; }
+
+table {
+  border-collapse: collapse;
+  border-spacing: 0; }
+
+/*Colors*/
+/*Colors-Primary*/
+/*Colors-Neutral*/
+/*Typography*/
+/*Body Copy*/
+/*Fon*/
+/*Mixins*/
+/*Titles*/
+/*Paragraphs*/
+/*Botones*/
+.btn {
+  width: 140px;
+  height: 45px;
+  margin: 0 auto;
+  display: block;
+  background-color: #f25f3a;
+  font-weight: 700;
+  color: #fafafa;
+  position: relative;
+  z-index: 1;
+  border: none;
+  border-radius: 100px;
+  box-shadow: 0 10px 10px 0px rgba(242, 95, 58, 0.26);
+  outline: none; }
+
+.container {
+  width: 90%;
+  margin: 0 auto; }
+
+.header {
+  width: 100%;
+  height: 100px; }
+
+/*Nav*/
+.nav__container {
+  padding-top: 40px;
+  display: flex;
+  justify-content: space-between;
+  position: relative;
+  z-index: 1; }
+
+.logo--header img {
+  width: 110px;
+  margin-top: 6px;
+  display: flex;
+  align-items: center; }
+
+.nav__hamburguesa img {
+  width: 25px;
+  height: 18px; }
+
+/*Hero*/
+.hero {
+  width: 100%; }
+
+.hero__image {
+  width: 100%;
+  position: relative;
+  z-index: 1; }
+
+.hero__image img {
+  width: 100%; }
+
+.hero__description {
+  width: 100%;
+  position: relative;
+  z-index: 1; }
+
+.hero__description h1 {
+  text-align: center;
+  line-height: 1.2em;
+  font-size: 2.5em;
+  font-family: "Be Vietnam", Helvetica;
+  font-weight: 700;
+  color: #242d52; }
+
+.hero__description p {
+  width: 90%;
+  margin: 20px auto 30px;
+  text-align: center;
+  font-size: 1em;
+  font-family: "Be Vietnam", Helvetica;
+  font-weight: 400;
+  color: #9095a7;
+  line-height: 1.8em; }
+
+.decoration-background-hero {
+  position: absolute;
+  top: -110px;
+  right: -120px;
+  z-index: 0; }
+
+.decoration-background-hero img {
+  width: 450px; }
+
+/*Decoraction background*/
+.decoration-background-hero--bottom {
+  position: absolute;
+  top: 500px;
+  right: -170px;
+  z-index: 0; }
+
+.decoration-background-hero--bottom img {
+  width: 300px; }
+
+.main {
+  width: 100%;
+  margin-top: 100px; }
+
+.main__about {
+  text-align: center; }
+
+.main__about h2 {
+  line-height: 1.2em;
+  font-size: 2em;
+  font-family: "Be Vietnam", Helvetica;
+  font-weight: 700;
+  color: #242d52; }
+
+.main__about p {
+  margin-top: 20px;
+  text-align: center;
+  font-size: 0.9em;
+  font-family: "Be Vietnam", Helvetica;
+  font-weight: 400;
+  color: #9095a7;
+  line-height: 1.8em; }
+
+.main__description {
+  margin: 0 auto;
+  width: 100%; }
+
+.main__description-section {
+  width: 100%;
+  margin-top: 50px; }
+
+.main__description-num {
+  width: 100%;
+  height: 35px;
+  display: flex;
+  margin-left: 20px;
+  justify-content: space-evenly;
+  align-items: center;
+  background-color: #ffefeb; }
+
+.main__description-num::before {
+  width: 70px;
+  height: 100%;
+  margin-left: -45px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  content: '01';
+  font-family: "Be Vietnam", Helvetica;
+  font-size: 1em;
+  font-weight: 700;
+  color: #fafafa;
+  background-color: #f25f3a;
+  border-radius: 100px; }
+
+.ct-02::before {
+  content: '02'; }
+
+.ct-03::before {
+  content: '03'; }
+
+.main__description-num h3 {
+  font-family: "Be Vietnam", Helvetica;
+  font-size: 400;
+  font-weight: 700; }
+
+.main__description-section p {
+  margin-top: 20px;
+  font-size: 0.9em;
+  font-family: "Be Vietnam", Helvetica;
+  font-weight: 400;
+  color: #9095a7;
+  line-height: 1.8em; }

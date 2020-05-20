@@ -1,0 +1,28 @@
+/*Colors*/
+
+
+/*Colors-Primary*/
+
+$Bright-Red: hsl(12, 88%, 59%);
+$Dark-Blue: hsl(228, 39%, 23%);
+
+/*Colors-Neutral*/
+
+$Dark-Grayish-Blue: hsl(227, 12%, 61%);
+$Very-Dark-Blue: hsl(233, 12%, 13%);
+$Very-Pale-Red: hsl(13, 100%, 96%);
+$Vary-Light-Gray: hsl(0, 0%, 98%);
+
+/*Typography*/
+
+/*Body Copy*/
+$Font-Size-Primary: 1em;
+$Font-Size-Secundary: 2.5em;
+$Font-Size-Tertiary: $Font-Size-Secundary - .5;
+$Font-Size-Points: .9em;
+
+/*Fon*/
+$Font-Family: 'Be Vietnam', Helvetica;
+$Font-Weight-Small: 400;
+$Font-Weight-Medium: 500;
+$Font-Weight-Big: 700;

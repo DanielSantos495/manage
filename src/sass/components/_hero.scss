@@ -1,0 +1,52 @@
+/*Hero*/
+
+.hero {
+  width: 100%;
+}
+.hero__image {
+  width: 100%;
+  position: relative;
+  z-index: 1;
+
+}
+.hero__image img {
+  width: 100%;
+}
+
+.hero__description {
+  width: 100%;
+  position: relative;
+  z-index: 1;
+}
+.hero__description h1 {
+  text-align: center;
+  line-height: 1.2em;
+  @include title($Font-Size-Secundary, $Font-Family, $Font-Weight-Big, $Dark-Blue);
+}
+.hero__description p {
+  width: 90%;
+  margin: 20px auto 30px;
+  text-align: center;
+  @include paragraphs($Font-Size-Primary, $Font-Family, $Font-Weight-Small, $Dark-Grayish-Blue, 1.8em);
+
+}
+.decoration-background-hero {
+  position: absolute;
+  top: -110px;
+  right: -120px;
+  z-index: 0;
+}
+.decoration-background-hero img {
+  width: 450px;
+}
+
+/*Decoraction background*/
+.decoration-background-hero--bottom {
+  position: absolute;
+  top: 500px;
+  right: -170px;
+  z-index: 0;
+}
+.decoration-background-hero--bottom img {
+  width: 300px;
+}

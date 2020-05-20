@@ -1,0 +1,16 @@
+/*Botones*/
+.btn {
+  width: 140px;
+  height: 45px;
+  margin: 0 auto;
+  display: block;
+  background-color: $Bright-Red;
+  font-weight: $Font-Weight-Big;
+  color: $Vary-Light-Gray;
+  position: relative;
+  z-index: 1;
+  border: none;
+  border-radius: 100px;
+  box-shadow: 0 10px 10px 0px hsla(12, 88%, 59%, 0.26);
+  outline: none;
+}
