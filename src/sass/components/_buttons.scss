@@ -13,4 +13,12 @@
   border-radius: 100px;
   box-shadow: 0 10px 10px 0px hsla(12, 88%, 59%, 0.26);
   outline: none;
+  will-change: transform;
+  &:hover {
+    transform: scale(.99);
+  }
+  &:active {
+    transform: scale(.9);
+    background-color:hsl(12, 86%, 56%);
+  }
 }

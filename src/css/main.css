@@ -1,3 +1,4 @@
+@charset "UTF-8";
 /* http://meyerweb.com/eric/tools/css/reset/
   v2.0 | 20110126
   License: none (public domain)
@@ -35,6 +36,7 @@ table {
   border-collapse: collapse;
   border-spacing: 0; }
 
+/*Variables*/
 /*Colors*/
 /*Colors-Primary*/
 /*Colors-Neutral*/
@@ -58,11 +60,18 @@ table {
   border: none;
   border-radius: 100px;
   box-shadow: 0 10px 10px 0px rgba(242, 95, 58, 0.26);
-  outline: none; }
+  outline: none;
+  will-change: transform; }
+  .btn:hover {
+    transform: scale(0.99); }
+  .btn:active {
+    transform: scale(0.9);
+    background-color: #ef552e; }
 
 .container {
   width: 90%;
-  margin: 0 auto; }
+  margin: 0 auto;
+  overflow-x: hidden; }
 
 .header {
   width: 100%;
@@ -121,7 +130,16 @@ table {
   color: #9095a7;
   line-height: 1.8em; }
 
+/*Decoraction background*/
 .decoration-background-hero {
+  position: absolute;
+  top: 0;
+  right: 0;
+  bottom: 0;
+  left: 0;
+  overflow: hidden; }
+
+.decoration-background-hero span {
   position: absolute;
   top: -110px;
   right: -120px;
@@ -130,8 +148,15 @@ table {
 .decoration-background-hero img {
   width: 450px; }
 
-/*Decoraction background*/
 .decoration-background-hero--bottom {
+  position: absolute;
+  top: 0;
+  right: 0;
+  bottom: -241px;
+  left: 0;
+  overflow: hidden; }
+
+.decoration-background-hero--bottom span {
   position: absolute;
   top: 500px;
   right: -170px;
@@ -140,6 +165,7 @@ table {
 .decoration-background-hero--bottom img {
   width: 300px; }
 
+/*Main*/
 .main {
   width: 100%;
   margin-top: 100px; }
@@ -213,3 +239,127 @@ table {
   font-weight: 400;
   color: #9095a7;
   line-height: 1.8em; }
+
+/*Comments*/
+/*Commetns Slide*/
+.comments {
+  width: 100%;
+  margin-top: 100px;
+  text-align: center; }
+
+.comments__title {
+  font-size: 2em;
+  font-family: "Be Vietnam", Helvetica;
+  font-weight: 700;
+  color: #242d52; }
+
+.comments__slide {
+  width: 100%;
+  height: auto;
+  margin-top: 50px;
+  overflow: hidden; }
+
+.comments__slide ul {
+  width: 400%;
+  height: 300px;
+  display: flex;
+  animation: slide 20s infinite alternate ease-out;
+  will-change: transform; }
+
+.comments__slide li {
+  width: 100%; }
+
+.comments__slide li img {
+  width: 80px;
+  height: 80px; }
+
+.comments__slide li p small {
+  font-size: 1em;
+  font-family: "Be Vietnam", Helvetica;
+  font-weight: 700;
+  color: #242d52; }
+
+.comments__slide li p {
+  margin-top: 20px;
+  font-size: 0.9em;
+  font-family: "Be Vietnam", Helvetica;
+  font-weight: 400;
+  color: #1d1e25;
+  line-height: 1.8em; }
+
+.comments__slide-comment {
+  margin-top: -50px;
+  padding: 50px 20px 20px;
+  background-color: #fafafa; }
+
+/*BreakPoints Slide*/
+.comments__slide-brea-point {
+  width: 100%;
+  position: relative; }
+
+.comments__slide-brea-point ul {
+  width: 20%;
+  height: 50px;
+  display: flex;
+  margin: 0 auto; }
+
+.comments__slide-brea-point ul span {
+  width: 5px;
+  height: 5px;
+  display: block;
+  margin-right: 10px;
+  border: 1px solid red;
+  border-radius: 50%; }
+
+.comments__slide-point {
+  position: absolute;
+  top: 0;
+  right: 58%;
+  animation: breakPoint 20s infinite alternate;
+  will-change: transform; }
+
+.point-color {
+  width: 5px;
+  height: 5px;
+  display: block;
+  background-color: #f25f3a;
+  border: 1px solid #f25f3a;
+  border-radius: 50%; }
+
+/*Keyframes*/
+@keyframes breakPoint {
+  0% {
+    transform: translateX(0); }
+  20% {
+    transform: translateX(0); }
+  25% {
+    transform: translateX(17px); }
+  45% {
+    transform: translateX(17px); }
+  50% {
+    transform: translateX(34px); }
+  70% {
+    transform: translateX(34px); }
+  75% {
+    transform: translateX(51px); }
+  100% {
+    transform: translateX(51px); } }
+
+@keyframes slide {
+  /*El 5% que sobra de cada animación es el tiempo que esta presentandose el slide*/
+  0% {
+    transform: translateX(0); }
+  20% {
+    transform: translateX(0); }
+  25% {
+    transform: translateX(-25%); }
+  45% {
+    transform: translateX(-25%); }
+  50% {
+    transform: translateX(-50%); }
+  70% {
+    transform: translateX(-50%); }
+  75% {
+    transform: translateX(-75%); }
+  100% {
+    transform: translateX(-75%); } }

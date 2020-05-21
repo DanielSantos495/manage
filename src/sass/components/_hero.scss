@@ -30,7 +30,18 @@
   @include paragraphs($Font-Size-Primary, $Font-Family, $Font-Weight-Small, $Dark-Grayish-Blue, 1.8em);
 
 }
+
+
+/*Decoraction background*/
 .decoration-background-hero {
+  position: absolute;
+  top: 0;
+  right: 0;
+  bottom: 0 ;
+  left: 0;
+  overflow: hidden;
+}
+.decoration-background-hero span {
   position: absolute;
   top: -110px;
   right: -120px;
@@ -40,12 +51,21 @@
   width: 450px;
 }
 
-/*Decoraction background*/
-.decoration-background-hero--bottom {
+.decoration-background-hero--bottom  {
+  position: absolute;
+  top: 0;
+  right: 0;
+  bottom: -241px;
+  left: 0;
+  overflow: hidden;
+
+}
+.decoration-background-hero--bottom span {
   position: absolute;
   top: 500px;
   right: -170px;
   z-index: 0;
+
 }
 .decoration-background-hero--bottom img {
   width: 300px;
