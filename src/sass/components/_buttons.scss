@@ -1,24 +1,31 @@
 /*Botones*/
 .btn {
-  width: 140px;
-  height: 45px;
-  margin: 0 auto;
-  display: block;
-  background-color: $Bright-Red;
-  font-weight: $Font-Weight-Big;
-  color: $Vary-Light-Gray;
-  position: relative;
-  z-index: 1;
-  border: none;
-  border-radius: 100px;
-  box-shadow: 0 10px 10px 0px hsla(12, 88%, 59%, 0.26);
-  outline: none;
-  will-change: transform;
+  @include buttons(140px, 45px, $Bright-Red, $Vary-Light-Gray);
   &:hover {
     transform: scale(.99);
   }
   &:active {
     transform: scale(.9);
-    background-color:hsl(12, 86%, 56%);
+    background-color: hsla(12, 88%, 59%, 0.795);
+  }
+}
+.btn--white {
+  @include buttons(140px, 45px, $Vary-Light-Gray, $Bright-Red);
+  &:hover {
+    transform: scale(.99);
+  }
+  &:active {
+    transform: scale(.9);
+    color:hsla(12, 88%, 59%, 0.795);
+  }
+}
+.btn--form {
+  @include buttons(80px, 45px,  $Bright-Red, $Vary-Light-Gray);
+  &:hover {
+    transform: scale(.99);
+  }
+  &:active {
+    transform: scale(.9);
+    color:hsla(12, 88%, 59%, 0.795);
   }
 }

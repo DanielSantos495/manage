@@ -8,7 +8,7 @@
   display: flex;
   justify-content: space-between;
   position: relative;
-  z-index: 1;
+  // z-index: 0;
 }
 .logo--header img {
   width: 110px;
@@ -16,7 +16,49 @@
   display: flex;
   align-items: center;
 }
+.nav__deploy {
+  display: none;
+  background: linear-gradient(to bottom, transparent, black);
+  position: fixed;
+  top: 0;
+  right: 0;
+  bottom: 0;
+  left: 0;
+  z-index: 1000;
+}
+.nav__deploy-close {
+  display: none;
+  position: absolute;
+  top: 40px;
+  right: 22.5px;
+}
+.nav__deploy-box {
+  width: 90%;
+  height: 300px;
+  margin: 100px auto 0;
+  display: flex;
+  justify-content: center;
+  background-color: $Vary-Light-Gray;
+  border-radius: 5px;
+}
+.nav__deploy-box ul {
+  margin-top: 40px;
+  text-align: center;
+}
+.nav__deploy-box li {
+  margin-bottom: 30px;
+  font-family: $Font-Family;
+  font-size: $Font-Size-Primary;
+  font-weight: $Font-Weight-Big;
+
+  a {
+    color: $Dark-Blue;
+    text-decoration: none;
+  }
+}
 .nav__hamburguesa img {
   width: 25px;
   height: 18px;
+  position: relative;
+  z-index: 1;
 }
