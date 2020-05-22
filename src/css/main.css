@@ -47,6 +47,7 @@ table {
 /*Titles*/
 /*Paragraphs*/
 /*Buttons*/
+/*Media Queries*/
 /*Botones*/
 .btn {
   width: 140px;
@@ -312,7 +313,7 @@ table {
 
 .main__description-num h3 {
   font-family: "Be Vietnam", Helvetica;
-  font-size: 400;
+  font-size: 1em;
   font-weight: 700; }
 
 .main__description-section p {

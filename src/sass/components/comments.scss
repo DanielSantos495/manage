@@ -29,7 +29,7 @@
   }
   p {
     margin-top: 20px;
-  @include paragraphs($Font-Size-Points, $Font-Family, $Font-Weight-Small, $Very-Dark-Blue, 1.8em);
+    @include paragraphs($Font-Size-Points, $Font-Family, $Font-Weight-Small, $Very-Dark-Blue, 1.8em);
   }
   small {
     @include title($Font-Size-Primary, $Font-Family, $Font-Weight-Big, $Dark-Blue);
@@ -73,7 +73,6 @@
   background-color: $Bright-Red;
   border: 1px solid $Bright-Red;
   border-radius: 50%;
-  // opacity: 0;
 }
 
 /*Keyframes*/
