@@ -1,6 +1,8 @@
 .DS_Store
 *.png
 *.svg
-/node_modules/
 *.jpg
 *.jpeg
+*.scss
+/node_modules/
+/sass/
