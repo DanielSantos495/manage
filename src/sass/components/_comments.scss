@@ -1,0 +1,105 @@
+/*Comments*/
+/*Commetns Slide*/
+.comments {
+  width: 100%;
+  margin-top: 100px;
+  text-align: center;
+}
+.comments__title {
+  @include title($Font-Size-Tertiary, $Font-Family, $Font-Weight-Big, $Dark-Blue);
+}
+.comments__slide {
+  width: 100%;
+  height: auto;
+  margin: 50px 0 50px 0;
+  overflow: hidden;
+}
+.comments__slide ul {
+  width: 400%;
+  height: 300px;
+  display: flex;
+  animation: slide 20s infinite alternate ease-out;
+  will-change: transform;
+  @include media(laptop) {
+    width: 200%;
+    animation: slideLaptop 20s infinite alternate ease-out;
+  }
+}
+.comments__slide li {
+  width: 100%;
+  img  {
+    width: 80px;
+    height: 80px;
+  }
+  p {
+    margin-top: 20px;
+    @include paragraphs($Font-Size-Points, $Font-Family, $Font-Weight-Small, $Very-Dark-Blue, 1.8em);
+  }
+  small {
+    @include title($Font-Size-Primary, $Font-Family, $Font-Weight-Big, $Dark-Blue);
+  }
+}
+.comments__slide-comment {
+  width: 85%;
+  height: 170px;
+  margin: -50px auto 0;
+  padding: 50px 20px 20px;
+  background-color: $Vary-Light-Gray;
+}
+
+
+/*Keyframes*/
+@keyframes slide {
+  /*El 5% que sobra de cada animación es el tiempo que esta presentandose el slide*/
+  0%{
+    transform: translateX(0);
+  }
+  20% {
+    transform: translateX(0);
+  }
+  25%{
+    transform: translateX(-25%);
+  }
+  45% {
+    transform: translateX(-25%);
+  }
+  50% {
+    transform: translateX(-50%);
+  }
+  70% {
+    transform: translateX(-50%);
+  }
+  75% {
+    transform: translateX(-75%);
+  }
+  100% {
+    transform: translateX(-75%);
+  }
+}
+
+@keyframes slideLaptop {
+  0%{
+    transform: translateX(0);
+  }
+  20% {
+    transform: translateX(0);
+  }
+  25%{
+    transform: translateX(0);
+  }
+  45% {
+    transform: translateX(0);
+  }
+  50% {
+    transform: translateX(-50%);
+  }
+  70% {
+    transform: translateX(-50%);
+  }
+  75% {
+    transform: translateX(-50%);
+  }
+  100% {
+    transform: translateX(-50%);
+  }
+}
