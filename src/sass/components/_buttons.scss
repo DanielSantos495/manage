@@ -14,6 +14,9 @@
 }
 .btn--white {
   @include buttons(140px, 45px, 0 auto,  $Vary-Light-Gray, $Bright-Red);
+  @include media (laptop) {
+    @include buttons(140px, 45px, 0,  $Vary-Light-Gray, $Bright-Red);
+  }
   &:hover {
     transform: scale(.99);
   }
@@ -44,5 +47,15 @@
     transform: scale(.9);
     background-color: hsla(12, 88%, 59%, 0.795);
   }
+  }
+}
+.btn--comments {
+  @include buttons(140px, 45px, 0 auto, $Bright-Red, $Vary-Light-Gray);
+  &:hover {
+    transform: scale(.99);
+  }
+  &:active {
+    transform: scale(.9);
+    background-color: hsla(12, 88%, 59%, 0.795);
   }
 }

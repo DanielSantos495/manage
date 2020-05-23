@@ -11,7 +11,7 @@
 .comments__slide {
   width: 100%;
   height: auto;
-  margin-top: 50px;
+  margin: 50px 0 50px 0;
   overflow: hidden;
 }
 .comments__slide ul {
@@ -20,6 +20,10 @@
   display: flex;
   animation: slide 20s infinite alternate ease-out;
   will-change: transform;
+  @include media(laptop) {
+    width: 200%;
+    animation: slideLaptop 20s infinite alternate ease-out;
+  }
 }
 .comments__slide li {
   width: 100%;
@@ -36,83 +40,15 @@
   }
 }
 .comments__slide-comment {
-  margin-top: -50px;
+  width: 85%;
+  height: 170px;
+  margin: -50px auto 0;
   padding: 50px 20px 20px;
   background-color: $Vary-Light-Gray;
 }
-/*BreakPoints Slide*/
-.comments__slide-brea-point {
-  width: 100%;
-  position: relative;
-  ul {
-    width: 20%;
-    height: 50px;
-    display: flex;
-    justify-content: center;
-    margin: 0 auto;
-  }
-  ul span {
-    width: 5px;
-    height: 5px;
-    display: block;
-    margin-right: 10px;
-    border: 1px solid red;
-    border-radius: 50%;
-  }
-}
-.comments__slide-point {
-  position: absolute;
-  top: 0;
-  right: 58%;
-  animation: breakPoint 20s infinite alternate;
-  will-change: transform;
-  @include media(cellphone) {
-    right: 56.3%;
-  }
-  @include media(tablet-small) {
-    right: 55%;
-  }
-  @include media(tablet) {
-    right: 53.7%;
-  }
-}
-.point-color {
-  width: 5px;
-  height: 5px;
-  display: block;
-  background-color: $Bright-Red;
-  border: 1px solid $Bright-Red;
-  border-radius: 50%;
-}
+
 
 /*Keyframes*/
-@keyframes breakPoint {
-  0%{
-    transform: translateX(0);
-  }
-  20% {
-    transform: translateX(0);
-  }
-  25%{
-    transform: translateX(17px);
-  }
-  45% {
-    transform: translateX(17px);
-  }
-  50% {
-    transform: translateX(34px);
-  }
-  70% {
-    transform: translateX(34px);
-  }
-  75% {
-    transform: translateX(51px);
-  }
-  100% {
-    transform: translateX(51px);
-  }
-}
-
 @keyframes slide {
   /*El 5% que sobra de cada animación es el tiempo que esta presentandose el slide*/
   0%{
@@ -138,5 +74,32 @@
   }
   100% {
     transform: translateX(-75%);
+  }
+}
+
+@keyframes slideLaptop {
+  0%{
+    transform: translateX(0);
+  }
+  20% {
+    transform: translateX(0);
+  }
+  25%{
+    transform: translateX(0);
+  }
+  45% {
+    transform: translateX(0);
+  }
+  50% {
+    transform: translateX(-50%);
+  }
+  70% {
+    transform: translateX(-50%);
+  }
+  75% {
+    transform: translateX(-50%);
+  }
+  100% {
+    transform: translateX(-50%);
   }
 }
