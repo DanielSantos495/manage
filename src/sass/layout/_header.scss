@@ -8,6 +8,9 @@
   display: flex;
   justify-content: space-between;
   position: relative;
+  @include media(laptop) {
+    align-items: center;
+  }
   // z-index: 0;
 }
 .logo--header img {
@@ -15,6 +18,12 @@
   margin-top: 6px;
   display: flex;
   align-items: center;
+  @include media(tablet) {
+    width: 150px;
+  }
+  @include media(laptop) {
+    width: 150px;
+  }
 }
 .nav__deploy {
   display: none;
@@ -25,13 +34,30 @@
   bottom: 0;
   left: 0;
   z-index: 1000;
+  @include media(laptop) {
+    width: 100%;
+    display: block;
+    background: none;
+    position: static;
+  }
+}
+.nav__deploy.show {
+  display: block;
 }
 .nav__deploy-close {
-  display: none;
+  // display: none;
   position: absolute;
   top: 40px;
   right: 22.5px;
+  @include media(laptop) {
+    display: none;
+  }
 }
+// .nav__deploy-close img {
+//   @include media(laptop) {
+//     display: none;
+//   }
+// }
 .nav__deploy-box {
   width: 90%;
   height: 300px;
@@ -40,20 +66,42 @@
   justify-content: center;
   background-color: $Vary-Light-Gray;
   border-radius: 5px;
+  animation: showMenu 1s;
+  @include media(laptop) {
+    width: 100%;
+    height: auto;
+    margin: 25px 0 0;
+    background: none;
+    animation: none;
+  }
 }
 .nav__deploy-box ul {
   margin-top: 40px;
   text-align: center;
+  @include media(laptop) {
+    width: 100%;
+    display: flex;
+    justify-content: space-evenly;
+    margin-top: 0;
+  }
 }
 .nav__deploy-box li {
   margin-bottom: 30px;
   font-family: $Font-Family;
   font-size: $Font-Size-Primary;
   font-weight: $Font-Weight-Big;
-
+  @include media(laptop) {
+    font-size: $Font-Size-Primary - .2em;
+    font-weight: $Font-Weight-Small;
+  }
   a {
     color: $Dark-Blue;
     text-decoration: none;
+  }
+}
+.nav__hamburguesa {
+  @include media(laptop) {
+    display: none;
   }
 }
 .nav__hamburguesa img {
@@ -61,4 +109,16 @@
   height: 18px;
   position: relative;
   z-index: 1;
+  @include media(laptop) {
+    display: none;
+  }
+}
+/*Keyframes menu burger*/
+@keyframes showMenu {
+  0% {
+    transform: translateY(-500px);
+  }
+  100% {
+    transform: translateY(0);
+  }
 }

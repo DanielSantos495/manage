@@ -2,9 +2,18 @@
 .main {
   width: 100%;
   margin-top: 100px;
+  position: relative;
+}
+.main__container {
+  @include media(laptop) {
+    display: flex;
+  }
 }
 .main__about {
   text-align: center;
+  @include media(laptop) {
+    text-align: start;
+  }
 }
 .main__about h2 {
   line-height: 1.2em;
@@ -14,14 +23,21 @@
   margin-top: 20px;
   text-align: center;
   @include paragraphs($Font-Size-Points, $Font-Family, $Font-Weight-Small, $Dark-Grayish-Blue, 1.8em);
+  @include media(laptop) {
+    width: 60%;
+    text-align: start;
+  }
 }
 .main__description {
-  margin: 0 auto;
+  margin: 50px auto 0;
   width: 100%;
+  @include media(laptop) {
+    margin: 0 0 0 130px;
+  }
 }
 .main__description-section {
   width: 100%;
-  margin-top: 50px;
+  margin-bottom: 50px;
 }
 .main__description-num {
   width: 100%;
@@ -31,11 +47,16 @@
   justify-content: space-evenly;
   align-items: center;
   background-color: $Very-Pale-Red;
+  position: relative;
+  @include media(laptop) {
+    margin-left: -60px;
+    background: none;
+  }
 }
 .main__description-num::before {
   width: 70px;
   height: 100%;
-  margin-left: -45px;
+  // margin-left: -14%;
   display: flex;
   align-items: center;
   justify-content: center;
@@ -46,6 +67,21 @@
   color: $Vary-Light-Gray;
   background-color:$Bright-Red;
   border-radius: 100px;
+  position: absolute;
+  right: 85%;
+  @include media(cellphone) {
+    right: 88%;
+  }
+  @include media(tablet-small) {
+    right: 90.5%;
+  }
+  @include media(tablet) {
+    right: 93%;
+  }
+  @include media(laptop) {
+    margin-left: -20%;
+    right: 87%;
+  }
 }
 .ct-02::before {
   content: '02';
@@ -60,5 +96,9 @@
 }
 .main__description-section p {
   margin-top: 20px;
-  @include paragraphs($Font-Size-Points, $Font-Family, $Font-Weight-Small, $Dark-Grayish-Blue, 1.8em)
+  @include paragraphs($Font-Size-Points, $Font-Family, $Font-Weight-Small, $Dark-Grayish-Blue, 1.8em);
+  @include media(laptop) {
+    width: 80%;
+    margin-left: 10%;
+  }
 }

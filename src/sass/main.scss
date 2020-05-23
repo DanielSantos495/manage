@@ -3,8 +3,9 @@
 @import './utils/mixins';
 @import './components/buttons';
 @import './global/container';
+@import './global/scroll';
 @import './layout/header';
 @import './components/hero';
 @import './components/content-main';
-@import './components/comments';
+@import './components/_comments';
 @import './layout/footer';

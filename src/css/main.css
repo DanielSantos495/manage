@@ -64,6 +64,22 @@ table {
   box-shadow: 0 10px 10px 0px rgba(242, 95, 58, 0.26);
   outline: none;
   will-change: transform; }
+  @media screen and (min-width: 1024px) {
+    .btn {
+      width: 140px;
+      height: 45px;
+      margin: 0;
+      display: block;
+      background-color: #f25f3a;
+      font-weight: 700;
+      color: #fafafa;
+      position: relative;
+      z-index: 1;
+      border: none;
+      border-radius: 100px;
+      box-shadow: 0 10px 10px 0px rgba(242, 95, 58, 0.26);
+      outline: none;
+      will-change: transform; } }
   .btn:hover {
     transform: scale(0.99); }
   .btn:active {
@@ -94,7 +110,7 @@ table {
 .btn--form {
   width: 80px;
   height: 45px;
-  margin: 0 auto;
+  margin: 0;
   display: block;
   background-color: #f25f3a;
   font-weight: 700;
@@ -112,15 +128,46 @@ table {
     transform: scale(0.9);
     color: rgba(242, 95, 58, 0.795); }
 
+.btn--laptop {
+  display: none; }
+  @media screen and (min-width: 1024px) {
+    .btn--laptop {
+      width: 140px;
+      height: 45px;
+      margin: 0 auto;
+      display: block;
+      background-color: #f25f3a;
+      font-weight: 700;
+      color: #fafafa;
+      position: relative;
+      z-index: 1;
+      border: none;
+      border-radius: 100px;
+      box-shadow: 0 10px 10px 0px rgba(242, 95, 58, 0.26);
+      outline: none;
+      will-change: transform; }
+      .btn--laptop:hover {
+        transform: scale(0.99); }
+      .btn--laptop:active {
+        transform: scale(0.9);
+        background-color: rgba(242, 95, 58, 0.795); } }
+
 .container {
   width: 90%;
   margin: 0 auto;
   overflow-x: hidden; }
+  @media screen and (min-width: 1024px) {
+    .container {
+      width: 80%; } }
 
 .container-fluid {
   width: 100%;
   margin: 0 auto;
   overflow-x: hidden; }
+
+/*Scroll*/
+html {
+  scroll-behavior: smooth; }
 
 .header {
   width: 100%;
@@ -132,12 +179,21 @@ table {
   display: flex;
   justify-content: space-between;
   position: relative; }
+  @media screen and (min-width: 1024px) {
+    .nav__container {
+      align-items: center; } }
 
 .logo--header img {
   width: 110px;
   margin-top: 6px;
   display: flex;
   align-items: center; }
+  @media screen and (min-width: 800px) and (max-width: 1023px) {
+    .logo--header img {
+      width: 150px; } }
+  @media screen and (min-width: 1024px) {
+    .logo--header img {
+      width: 150px; } }
 
 .nav__deploy {
   display: none;
@@ -148,12 +204,23 @@ table {
   bottom: 0;
   left: 0;
   z-index: 1000; }
+  @media screen and (min-width: 1024px) {
+    .nav__deploy {
+      width: 100%;
+      display: block;
+      background: none;
+      position: static; } }
+
+.nav__deploy.show {
+  display: block; }
 
 .nav__deploy-close {
-  display: none;
   position: absolute;
   top: 40px;
   right: 22.5px; }
+  @media screen and (min-width: 1024px) {
+    .nav__deploy-close {
+      display: none; } }
 
 .nav__deploy-box {
   width: 90%;
@@ -162,35 +229,78 @@ table {
   display: flex;
   justify-content: center;
   background-color: #fafafa;
-  border-radius: 5px; }
+  border-radius: 5px;
+  animation: showMenu 1s; }
+  @media screen and (min-width: 1024px) {
+    .nav__deploy-box {
+      width: 100%;
+      height: auto;
+      margin: 25px 0 0;
+      background: none;
+      animation: none; } }
 
 .nav__deploy-box ul {
   margin-top: 40px;
   text-align: center; }
+  @media screen and (min-width: 1024px) {
+    .nav__deploy-box ul {
+      width: 100%;
+      display: flex;
+      justify-content: space-evenly;
+      margin-top: 0; } }
 
 .nav__deploy-box li {
   margin-bottom: 30px;
   font-family: "Be Vietnam", Helvetica;
   font-size: 1em;
   font-weight: 700; }
+  @media screen and (min-width: 1024px) {
+    .nav__deploy-box li {
+      font-size: 0.8em;
+      font-weight: 400; } }
   .nav__deploy-box li a {
     color: #242d52;
     text-decoration: none; }
+
+@media screen and (min-width: 1024px) {
+  .nav__hamburguesa {
+    display: none; } }
 
 .nav__hamburguesa img {
   width: 25px;
   height: 18px;
   position: relative;
   z-index: 1; }
+  @media screen and (min-width: 1024px) {
+    .nav__hamburguesa img {
+      display: none; } }
+
+/*Keyframes menu burger*/
+@keyframes showMenu {
+  0% {
+    transform: translateY(-500px); }
+  100% {
+    transform: translateY(0); } }
 
 /*Hero*/
 .hero {
   width: 100%; }
+  @media screen and (min-width: 1024px) {
+    .hero {
+      margin-top: 100px; } }
+
+@media screen and (min-width: 1024px) {
+  .hero__container {
+    display: flex;
+    flex-direction: row-reverse; } }
 
 .hero__image {
   width: 100%;
   position: relative;
   z-index: 1; }
+  @media screen and (min-width: 1024px) {
+    .hero__image {
+      width: 60%; } }
 
 .hero__image img {
   width: 100%; }
@@ -199,6 +309,10 @@ table {
   width: 100%;
   position: relative;
   z-index: 2; }
+  @media screen and (min-width: 1024px) {
+    .hero__description {
+      width: 40%;
+      margin-top: 50px; } }
 
 .hero__description h1 {
   text-align: center;
@@ -207,6 +321,9 @@ table {
   font-family: "Be Vietnam", Helvetica;
   font-weight: 700;
   color: #242d52; }
+  @media screen and (min-width: 1024px) {
+    .hero__description h1 {
+      text-align: start; } }
 
 .hero__description p {
   width: 90%;
@@ -217,6 +334,10 @@ table {
   font-weight: 400;
   color: #9095a7;
   line-height: 1.8em; }
+  @media screen and (min-width: 1024px) {
+    .hero__description p {
+      margin: 20px 0 30px;
+      text-align: start; } }
 
 /*Decoraction background*/
 .decoration-background-hero {
@@ -231,8 +352,15 @@ table {
     top: -110px;
     right: -120px;
     z-index: 0; }
+    @media screen and (min-width: 1024px) {
+      .decoration-background-hero span {
+        top: -240px;
+        right: -250px; } }
   .decoration-background-hero img {
     width: 450px; }
+    @media screen and (min-width: 1024px) {
+      .decoration-background-hero img {
+        width: 800px; } }
 
 .decoration-background-hero--bottom {
   position: absolute;
@@ -241,21 +369,42 @@ table {
   bottom: -241px;
   left: 0;
   overflow: hidden; }
+  @media screen and (min-width: 1024px) {
+    .decoration-background-hero--bottom {
+      top: 500px;
+      right: 830px;
+      bottom: -1000px;
+      left: 0; } }
   .decoration-background-hero--bottom span {
     position: absolute;
     top: 500px;
     right: -170px;
     z-index: 0; }
+    @media screen and (min-width: 1024px) {
+      .decoration-background-hero--bottom span {
+        right: 0px;
+        bottom: 800px; } }
   .decoration-background-hero--bottom img {
     width: 300px; }
+    @media screen and (min-width: 1024px) {
+      .decoration-background-hero--bottom img {
+        width: 800px; } }
 
 /*Main*/
 .main {
   width: 100%;
-  margin-top: 100px; }
+  margin-top: 100px;
+  position: relative; }
+
+@media screen and (min-width: 1024px) {
+  .main__container {
+    display: flex; } }
 
 .main__about {
   text-align: center; }
+  @media screen and (min-width: 1024px) {
+    .main__about {
+      text-align: start; } }
 
 .main__about h2 {
   line-height: 1.2em;
@@ -272,14 +421,21 @@ table {
   font-weight: 400;
   color: #9095a7;
   line-height: 1.8em; }
+  @media screen and (min-width: 1024px) {
+    .main__about p {
+      width: 60%;
+      text-align: start; } }
 
 .main__description {
-  margin: 0 auto;
+  margin: 50px auto 0;
   width: 100%; }
+  @media screen and (min-width: 1024px) {
+    .main__description {
+      margin: 0 0 0 130px; } }
 
 .main__description-section {
   width: 100%;
-  margin-top: 50px; }
+  margin-bottom: 50px; }
 
 .main__description-num {
   width: 100%;
@@ -288,12 +444,16 @@ table {
   margin-left: 20px;
   justify-content: space-evenly;
   align-items: center;
-  background-color: #ffefeb; }
+  background-color: #ffefeb;
+  position: relative; }
+  @media screen and (min-width: 1024px) {
+    .main__description-num {
+      margin-left: -60px;
+      background: none; } }
 
 .main__description-num::before {
   width: 70px;
   height: 100%;
-  margin-left: -45px;
   display: flex;
   align-items: center;
   justify-content: center;
@@ -303,7 +463,22 @@ table {
   font-weight: 700;
   color: #fafafa;
   background-color: #f25f3a;
-  border-radius: 100px; }
+  border-radius: 100px;
+  position: absolute;
+  right: 85%; }
+  @media screen and (min-width: 480px) and (max-width: 599px) {
+    .main__description-num::before {
+      right: 88%; } }
+  @media screen and (min-width: 600px) and (max-width: 799px) {
+    .main__description-num::before {
+      right: 90.5%; } }
+  @media screen and (min-width: 800px) and (max-width: 1023px) {
+    .main__description-num::before {
+      right: 93%; } }
+  @media screen and (min-width: 1024px) {
+    .main__description-num::before {
+      margin-left: -20%;
+      right: 87%; } }
 
 .ct-02::before {
   content: '02'; }
@@ -323,6 +498,10 @@ table {
   font-weight: 400;
   color: #9095a7;
   line-height: 1.8em; }
+  @media screen and (min-width: 1024px) {
+    .main__description-section p {
+      width: 80%;
+      margin-left: 10%; } }
 
 /*Comments*/
 /*Commetns Slide*/
@@ -381,6 +560,7 @@ table {
     width: 20%;
     height: 50px;
     display: flex;
+    justify-content: center;
     margin: 0 auto; }
   .comments__slide-brea-point ul span {
     width: 5px;
@@ -396,6 +576,15 @@ table {
   right: 58%;
   animation: breakPoint 20s infinite alternate;
   will-change: transform; }
+  @media screen and (min-width: 480px) and (max-width: 599px) {
+    .comments__slide-point {
+      right: 56.3%; } }
+  @media screen and (min-width: 600px) and (max-width: 799px) {
+    .comments__slide-point {
+      right: 55%; } }
+  @media screen and (min-width: 800px) and (max-width: 1023px) {
+    .comments__slide-point {
+      right: 53.7%; } }
 
 .point-color {
   width: 5px;
@@ -467,6 +656,15 @@ table {
   font-family: "Be Vietnam", Helvetica;
   font-weight: 700;
   color: #fafafa; }
+  @media screen and (min-width: 480px) and (max-width: 599px) {
+    .footer__get-started p {
+      margin-bottom: 100px; } }
+  @media screen and (min-width: 600px) and (max-width: 799px) {
+    .footer__get-started p {
+      margin-bottom: 100px; } }
+  @media screen and (min-width: 800px) and (max-width: 1023px) {
+    .footer__get-started p {
+      margin-bottom: 100px; } }
 
 .decoration-background-footer {
   position: absolute;
@@ -493,7 +691,8 @@ table {
 .footer__info-form {
   width: 100%;
   margin-top: 50px;
-  display: flex; }
+  display: flex;
+  justify-content: space-around; }
 
 .footer__info-form input {
   width: 230px;

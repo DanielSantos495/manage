@@ -1,6 +1,9 @@
 /*Botones*/
 .btn {
-  @include buttons(140px, 45px, $Bright-Red, $Vary-Light-Gray);
+  @include buttons(140px, 45px, 0 auto, $Bright-Red, $Vary-Light-Gray);
+  @include media(laptop) {
+    @include buttons(140px, 45px, 0, $Bright-Red, $Vary-Light-Gray)
+  }
   &:hover {
     transform: scale(.99);
   }
@@ -10,7 +13,7 @@
   }
 }
 .btn--white {
-  @include buttons(140px, 45px, $Vary-Light-Gray, $Bright-Red);
+  @include buttons(140px, 45px, 0 auto,  $Vary-Light-Gray, $Bright-Red);
   &:hover {
     transform: scale(.99);
   }
@@ -20,12 +23,26 @@
   }
 }
 .btn--form {
-  @include buttons(80px, 45px,  $Bright-Red, $Vary-Light-Gray);
+  @include buttons(80px, 45px, 0, $Bright-Red, $Vary-Light-Gray);
   &:hover {
     transform: scale(.99);
   }
   &:active {
     transform: scale(.9);
     color:hsla(12, 88%, 59%, 0.795);
+  }
+}
+.btn--laptop {
+  display: none;
+  @include media(laptop) {
+    // display: block;
+    @include buttons(140px, 45px, 0 auto, $Bright-Red, $Vary-Light-Gray);
+  &:hover {
+    transform: scale(.99);
+  }
+  &:active {
+    transform: scale(.9);
+    background-color: hsla(12, 88%, 59%, 0.795);
+  }
   }
 }

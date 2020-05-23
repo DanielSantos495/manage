@@ -16,10 +16,10 @@
   line-height: $line-height;
 }
 /*Buttons*/
-@mixin buttons($width, $height, $back-color, $color) {
+@mixin buttons($width, $height, $margin, $back-color, $color) {
   width: $width;
   height: $height;
-  margin: 0 auto;
+  margin: $margin;
   display: block;
   background-color: $back-color;
   font-weight: $Font-Weight-Big;

@@ -2,12 +2,23 @@
 
 .hero {
   width: 100%;
+  @include media(laptop) {
+    margin-top: 100px;
+  }
+}
+.hero__container {
+  @include media(laptop) {
+    display: flex;
+    flex-direction: row-reverse;
+  }
 }
 .hero__image {
   width: 100%;
   position: relative;
   z-index: 1;
-
+  @include media(laptop) {
+    width: 60%;
+  }
 }
 .hero__image img {
   width: 100%;
@@ -17,18 +28,28 @@
   width: 100%;
   position: relative;
   z-index: 2;
+  @include media(laptop) {
+    width: 40%;
+    margin-top: 50px;
+  }
 }
 .hero__description h1 {
   text-align: center;
   line-height: 1.2em;
   @include title($Font-Size-Secundary, $Font-Family, $Font-Weight-Big, $Dark-Blue);
+  @include media(laptop) {
+  text-align: start;
+  }
 }
 .hero__description p {
   width: 90%;
   margin: 20px auto 30px;
   text-align: center;
   @include paragraphs($Font-Size-Primary, $Font-Family, $Font-Weight-Small, $Dark-Grayish-Blue, 1.8em);
-
+  @include media(laptop) {
+    margin: 20px 0 30px;
+    text-align: start;
+  }
 }
 
 
@@ -46,9 +67,16 @@
     top: -110px;
     right: -120px;
     z-index: 0;
+    @include media(laptop) {
+      top: -240px;
+      right: -250px;
+    }
   }
   img {
     width: 450px;
+    @include media(laptop) {
+      width: 800px;
+    }
   }
 }
 
@@ -59,15 +87,27 @@
   bottom: -241px;
   left: 0;
   overflow: hidden;
+  @include media(laptop) {
+    top: 500px;
+    right: 830px;
+    bottom: -1000px;
+    left: 0;
+  }
 
   span {
     position: absolute;
     top: 500px;
     right: -170px;
     z-index: 0;
+    @include media(laptop) {
+    right: 0px;
+    bottom: 800px;
+    }
   }
   img {
     width: 300px;
+    @include media(laptop) {
+      width: 800px;
+    }
   }
-
 }
