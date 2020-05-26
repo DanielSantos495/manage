@@ -220,18 +220,6 @@ html {
     .nav__container {
       align-items: center; } }
 
-.logo--header img {
-  width: 110px;
-  margin-top: 6px;
-  display: flex;
-  align-items: center; }
-  @media screen and (min-width: 800px) and (max-width: 1023px) {
-    .logo--header img {
-      width: 150px; } }
-  @media screen and (min-width: 1024px) {
-    .logo--header img {
-      width: 150px; } }
-
 .nav__deploy {
   display: none;
   background: linear-gradient(to bottom, transparent, black);
@@ -303,13 +291,13 @@ html {
   .nav__hamburguesa {
     display: none; } }
 
-.nav__hamburguesa img {
+.nav__hamburguesa svg {
   width: 25px;
   height: 18px;
   position: relative;
   z-index: 1; }
   @media screen and (min-width: 1024px) {
-    .nav__hamburguesa img {
+    .nav__hamburguesa svg {
       display: none; } }
 
 /*Keyframes menu burger*/
@@ -478,7 +466,7 @@ html {
   width: 100%;
   height: 35px;
   display: flex;
-  margin-left: 20px;
+  margin-left: 30px;
   justify-content: space-evenly;
   align-items: center;
   background-color: #ffefeb;
@@ -502,7 +490,7 @@ html {
   background-color: #f25f3a;
   border-radius: 100px;
   position: absolute;
-  right: 85%; }
+  right: 87%; }
   @media screen and (min-width: 480px) and (max-width: 599px) {
     .main__description-num::before {
       right: 88%; } }
